@@ -257,11 +257,8 @@ class  Brick {
             this.clear();
             this.rowStart++;
             this.drawBrick();
-            return;
         }
-        // brick.clear();
-        this.finishBrick();
-        randomNewBreak();
+
 
 
         // randomNewBreak();
@@ -326,16 +323,16 @@ class  Brick {
         }
         return flag;
     }
-    finishBrick(){
-        for (let i = 0; i < this.brickShape[this.indexBrickShape].length; i++){
-            for (let j = 0; j< this.brickShape[this.indexBrickShape][0].length; j++){
-                if (this.brickShape[this.indexBrickShape][i][j] !== 7){
-                    board.grid[i + this.rowStart][j + this.colStart] = this.id;
-                }
-            }
-        }
-        board.drawBoard();
-    }
+    // finishBrick(){
+    //     for (let i = 0; i < this.brickShape[this.indexBrickShape].length; i++){
+    //         for (let j = 0; j< this.brickShape[this.indexBrickShape][0].length; j++){
+    //             if (this.brickShape[this.indexBrickShape][i][j] !== 7){
+    //                 board.grid[i + this.rowStart][j + this.colStart] = this.id;
+    //             }
+    //         }
+    //     }
+    //     board.drawBoard();
+    // }
     moveBrick(){
         window.addEventListener('keydown', (evt)=> {
             switch (evt.key){
