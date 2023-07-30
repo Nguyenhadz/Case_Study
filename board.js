@@ -185,7 +185,6 @@ class Board{
         this.grid = this.getGrid();
     }
     getGrid(){
-        // return Array.from({ length: ROW }, () => Array(COL).fill(WHITE_COLOR_ID));
         let arrGrid =[];
         for (let i = 0; i<ROW; i++){
             let arr_element = [];
